@@ -38,6 +38,7 @@ return $resultado-1;
 
 
 function extraer($ruta){
+	
 	$citasaux=array();	
 
 	$autorkey=0;
@@ -83,11 +84,12 @@ function extraer($ruta){
 	$paisvalores=array();
 	$paisgraficolabels="";
 	$paisgraficovalores="";	
-
+	
 	$txt="Dato,";
+	
 	$csv = fopen("testfile.csv", "w") or die("Unable to open file!");
 	$datos = fopen("datos.json", "w") or die("Unable to open file!");
-	$xml=simplexml_load_file($ruta) or die("Error: Cannot create object");
+	$xml=simplexml_load_file("/home/vigtech/shared/repository/".$ruta."/busqueda0.xml") or die("Error: Cannot create object");
 	$palabras = array();
 	$numdocumentos=0;
 	$numcitas=0;
